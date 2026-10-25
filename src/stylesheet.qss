@@ -1,0 +1,316 @@
+/*
+ * uTorrent Light — a light, flat qBittorrent 5.x theme matched to uTorrent 3.3 (colors sampled from screenshots)
+ * (white panels, flat toolbar, green progress, grey sidebar selection, icon tabs).
+ * Best with Preferences > Behavior > Interface > Style: Fusion, Color scheme: Light.
+ */
+
+QToolTip {
+    background: #FFFFE1;
+    color: #000000;
+    border: 1px solid #767676;
+    padding: 2px 4px;
+}
+
+/* ---------- Toolbar: flat white, like uTorrent 3.3 ---------- */
+QToolBar {
+    background: #FFFFFF;
+    border: none;
+    border-bottom: 1px solid #D9D9D9;
+    spacing: 1px;
+    padding: 3px 6px;
+}
+QToolBar::separator {
+    width: 1px;
+    background: #DADADA;
+    margin: 4px 6px;
+}
+QToolButton {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    padding: 3px;
+}
+QToolButton:hover {
+    background: #E5F3FB;
+    border-color: #A9D3F5;
+}
+QToolButton:pressed, QToolButton:checked {
+    background: #CCE8FF;
+    border-color: #7DA2CE;
+}
+
+/* ---------- Lists and trees ---------- */
+QAbstractItemView {
+    background: #FFFFFF;
+    alternate-background-color: #FFFFFF;
+    selection-background-color: #3399FF;
+    selection-color: #FFFFFF;
+    border: 1px solid #D5D5D5;
+    outline: 0;
+    font-size: 12px;
+}
+QTreeView::item, QListView::item {
+    min-height: 18px;
+    padding: 0 2px;
+    border: none;
+}
+QTreeView::item:selected:active, QListView::item:selected:active {
+    background: #3399FF;
+    color: #FFFFFF;
+}
+QTreeView::item:selected:!active, QListView::item:selected:!active {
+    background: #D9E8F7;
+    color: #000000;
+}
+
+/* ---------- Left sidebar: white, grey selection, no frame ---------- */
+StatusFilterWidget, CategoryFilterWidget, TagFilterWidget, TrackersFilterWidget {
+    background: #FFFFFF;
+    border: none;
+}
+StatusFilterWidget::item, CategoryFilterWidget::item, TagFilterWidget::item, TrackersFilterWidget::item {
+    min-height: 20px;
+}
+StatusFilterWidget::item:selected:active, CategoryFilterWidget::item:selected:active,
+TagFilterWidget::item:selected:active, TrackersFilterWidget::item:selected:active,
+StatusFilterWidget::item:selected:!active, CategoryFilterWidget::item:selected:!active,
+TagFilterWidget::item:selected:!active, TrackersFilterWidget::item:selected:!active {
+    background: #E8E8E8;
+    color: #000000;
+}
+TransferListFiltersWidget, TransferListFiltersWidget QScrollArea, TransferListFiltersWidget QWidget {
+    background: #FFFFFF;
+}
+
+/* ---------- Column headers: flat, thin separators ---------- */
+QHeaderView {
+    background: #FFFFFF;
+    border: none;
+}
+QHeaderView::section {
+    background: #FFFFFF;
+    color: #000000;
+    border: none;
+    border-right: 1px solid #E5E5E5;
+    border-bottom: 1px solid #D5D5D5;
+    padding: 3px 6px;
+    font-size: 12px;
+}
+QHeaderView::section:hover {
+    background: #E5F3FB;
+}
+
+/* ---------- Bottom detail tabs: grey strip, white active tab ---------- */
+QTabWidget::pane {
+    border: 1px solid #C9C9C9;
+    background: #FFFFFF;
+    top: -1px;
+}
+QTabBar {
+    background: #F0F0F0;
+}
+QTabBar::tab {
+    background: #F0F0F0;
+    color: #000000;
+    border: 1px solid #C9C9C9;
+    border-bottom: none;
+    padding: 3px 9px;
+    margin-right: -1px;
+    margin-top: 2px;
+}
+QTabBar::tab:selected {
+    background: #FFFFFF;
+    margin-top: 0;
+    margin-bottom: -1px;
+}
+QTabBar::tab:!selected:hover {
+    background: #E5F3FB;
+}
+
+/* ---------- General tab section bands ("Transfer", "Information") ---------- */
+QGroupBox {
+    border: none;
+    border-top: 1px solid #D5D5D5;
+    margin-top: 1.4em;
+    font-weight: bold;
+}
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    left: 0;
+    padding: 2px 8px;
+    background: #F0F0F0;
+    color: #000000;
+}
+
+/* ---------- Inputs and buttons ---------- */
+QLineEdit, QComboBox, QSpinBox, QDoubleSpinBox, QPlainTextEdit, QTextEdit {
+    background: #FFFFFF;
+    border: 1px solid #ABADB3;
+    border-radius: 2px;
+    padding: 2px 4px;
+    selection-background-color: #3399FF;
+    selection-color: #FFFFFF;
+}
+QLineEdit:focus, QComboBox:focus, QSpinBox:focus, QDoubleSpinBox:focus {
+    border-color: #3399FF;
+}
+QPushButton {
+    background: #E1E1E1;
+    border: 1px solid #ADADAD;
+    border-radius: 2px;
+    padding: 3px 12px;
+    color: #000000;
+}
+QPushButton:hover {
+    background: #E5F1FB;
+    border-color: #0078D7;
+}
+QPushButton:pressed {
+    background: #CCE4F7;
+    border-color: #005499;
+}
+QPushButton:default {
+    border-color: #0078D7;
+}
+
+/* ---------- Progress bars outside the list ---------- */
+QProgressBar {
+    background: #FFFFFF;
+    border: 1px solid #BCBCBC;
+    border-radius: 0;
+    text-align: center;
+    color: #000000;
+}
+QProgressBar::chunk {
+    background: #A9D579;
+}
+
+/* ---------- Menus ---------- */
+QMenu {
+    background: #F2F2F2;
+    border: 1px solid #CCCCCC;
+    padding: 2px;
+}
+QMenu::item {
+    padding: 3px 24px 3px 22px;
+    color: #000000;
+}
+QMenu::item:selected {
+    background: #91C9F7;
+    color: #000000;
+}
+QMenu::item:disabled {
+    color: #A0A0A0;
+}
+QMenu::separator {
+    height: 1px;
+    background: #D7D7D7;
+    margin: 3px 6px;
+}
+
+/* ---------- Splitters and status bar ---------- */
+QSplitter::handle {
+    background: #F0F0F0;
+}
+QSplitter::handle:horizontal {
+    width: 4px;
+}
+QSplitter::handle:vertical {
+    height: 4px;
+}
+QStatusBar {
+    background: #F0F0F0;
+    border-top: 1px solid #D5D5D5;
+}
+QStatusBar::item {
+    border: none;
+}
+
+/* ---------- Light scrollbars ---------- */
+QScrollBar:vertical {
+    background: #F0F0F0;
+    width: 14px;
+    margin: 0;
+}
+QScrollBar:horizontal {
+    background: #F0F0F0;
+    height: 14px;
+    margin: 0;
+}
+QScrollBar::handle:vertical {
+    background: #CDCDCD;
+    min-height: 24px;
+    margin: 2px;
+}
+QScrollBar::handle:horizontal {
+    background: #CDCDCD;
+    min-width: 24px;
+    margin: 2px;
+}
+QScrollBar::handle:hover {
+    background: #A6A6A6;
+}
+QScrollBar::add-line, QScrollBar::sub-line {
+    width: 0;
+    height: 0;
+}
+QScrollBar::add-page, QScrollBar::sub-page {
+    background: none;
+}
+
+/* ---------- Detail panel tab buttons (qBittorrent draws them as push buttons) ---------- */
+PropertiesWidget > QPushButton {
+    background: #F0F0F0;
+    border: 1px solid #C9C9C9;
+    border-radius: 0;
+    padding: 3px 10px;
+    color: #000000;
+}
+PropertiesWidget > QPushButton:hover {
+    background: #E5F3FB;
+    border-color: #A9D3F5;
+}
+PropertiesWidget > QPushButton:pressed {
+    background: #FFFFFF;
+    border-color: #ABABAB;
+    font-weight: bold;
+}
+
+/* ---------- Toolbar buttons with a menu (e.g. the lock button) ---------- */
+QToolButton[popupMode="1"] {
+    padding-right: 15px;
+}
+QToolButton::menu-button {
+    border: none;
+    width: 14px;
+}
+QToolButton::menu-arrow, QToolButton::menu-indicator {
+    image: url(:/uitheme/ui/arrow-down.svg);
+    width: 9px;
+    height: 9px;
+}
+QToolButton::menu-indicator {
+    subcontrol-position: bottom right;
+}
+
+/* ---------- Detail panel pages: white like the uTorrent info pane ---------- */
+PropertiesWidget QStackedWidget, PropertiesWidget QScrollArea,
+PropertiesWidget #scrollAreaWidgetContents, PropertiesWidget #groupBar {
+    background: #FFFFFF;
+}
+
+/* ---------- Status bar: plain text segments like uTorrent, no boxed buttons ---------- */
+QStatusBar QPushButton {
+    background: transparent;
+    border: none;
+    padding: 1px 6px;
+    color: #000000;
+}
+QStatusBar QPushButton:hover {
+    background: #E5F3FB;
+    border: 1px solid #A9D3F5;
+}
+QStatusBar QLabel {
+    padding: 0 4px;
+}
